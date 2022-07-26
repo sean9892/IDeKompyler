@@ -6,6 +6,8 @@ class OPCODE:
     oparg  : bool # existence of oparg
     push   : int  # the number of elements that operation pushes
     pop    : int  # the number of elements that operation pops
+    def __repr__(self):
+        return f"{self.opname,self.oparg,self.push,self.pop}"
 
 opcode = {} # opcode to OPCODE object
 opmap  = {} # opname to OPCODE object

@@ -1,4 +1,10 @@
-from IDeKompyler.opcode.opcode import *
+from IDeKompyler.opcode.op_code import (
+    OPCODE,
+    opcode,
+    opmap,
+    def_op,
+    rm_op
+)
 
 def init():
     def_op(  1, "POP_TOP"                     , False, 0, 1)
@@ -120,3 +126,7 @@ def init():
     def_op(158, "BUILD_TUPLE_UNPACK_WITH_CALL",  True,-1,-1)
     def_op(160, "LOAD_METHOD"                 ,  True,-1,-1)
     def_op(161, "CALL_METHOD"                 ,  True,-1,-1)
+
+if __name__ == "__main__":
+    init()
+    print(opmap["BUILD_TUPLE_UNPACK_WITH_CALL"])
